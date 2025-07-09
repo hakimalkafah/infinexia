@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinexia | Elevate Your Reach</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (via CDN so no build step needed) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Minor tweaks that Tailwind doesn’t cover out‑of‑the‑box */
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Simple fade‑in animation */
+    .fade {
+      animation: fade 1s ease-in-out 0.1s both;
+    }
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .font-playfair{font-family:'Playfair Display',serif;}
+    .font-montserrat-extralight{font-family:'Montserrat',sans-serif;font-weight:200;}
+    .font-montserrat { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-900 bg-white antialiased">
+  <!-- NAVBAR -->
+  <header class="bg-white/90 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-5">
+      <!-- <a href="#" class="text-2xl font-bold tracking-tight">Infinexia</a> -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#services" class="hover:text-indigo-600 transition">Services</a>
+        <a href="#about"     class="hover:text-indigo-600 transition">About</a>
+        <a href="#contact"   class="hover:text-indigo-600 transition">Contact</a>
+      </nav>
+      <!-- Mobile burger (optional) could go here -->
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative h-[60vh] md:h-[75vh] flex items-center justify-center bg-center bg-cover" style="background-image:url('background_7.jpg');">
+   <div class="absolute top-8 left-1/2 -translate-x-1/2 z-20
+            text-white text-4xl font-bold font-montserrat tracking-wide">
+        INFINEXIA
+    </div>
+    <span class="absolute inset-0 bg-black/60"></span>
+    <div class="relative z-10 text-center px-4 fade">
+      <h1 class="font-playfair text-4xl md:text-6xl text-white mb-4 drop-shadow">Elevate Your Reach</h1>
+      <!-- <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-200">Scale your brand through data‑driven influencer relationships.</p> -->
+    </div>
+  </section>
+
+  <!-- ABOUT / SERVICES (placeholder – tweak as needed) -->
+  <section id="about" class="py-20 bg-gray-50 fade">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Why Infinexia?</h2>
+        <p class="leading-relaxed text-gray-600">We connect tech brands with creators who share authentic stories, delivering measurable impact and long‑term growth. From campaign ideation to performance analytics, our team handles everything so you can focus on building products your customers love.</p>
+      </div>
+      <ul class="space-y-6 text-gray-700">
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+          <span>Curated roster of 300+ tech creators</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+          <span>Full‑service campaign management</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+          <span>Conversion‑focused performance reporting</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-20 fade">
+    <div class="max-w-xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Drop us a line</h2>
+      <!-- Netlify form – swap for your provider (EmailJS, Formspree, etc.) -->
+      <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+        <input type="hidden" name="form-name" value="contact">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1">Name</label>
+          <input id="name" name="name" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1">Email&nbsp;<span class="text-red-600">*</span></label>
+          <input id="email" type="email" name="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-sm py-6 fade">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      © 2025 Infinexia — All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Minimal cookie banner (optional) -->
+  <div id="cookie-banner" class="fixed bottom-4 left-1/2 -translate-x-1/2 max-w-md bg-white shadow-lg rounded-xl p-4 flex items-start gap-4 border border-gray-200" style="display:none;">
+    <p class="text-sm text-gray-700 flex-1">This site uses cookies to improve your experience. By continuing, you agree to our <a href="#" class="underline">privacy policy</a>.</p>
+    <button id="cookie-btn" class="text-sm font-semibold text-indigo-600">Accept</button>
+  </div>
+  <script>
+    // Simple cookie banner logic (no external lib)
+    if (!localStorage.getItem('cookiesAccepted')) document.getElementById('cookie-banner').style.display = 'flex';
+    document.getElementById('cookie-btn').addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'yes');
+      document.getElementById('cookie-banner').remove();
+    });
+  </script>
+</body>
+</html>
