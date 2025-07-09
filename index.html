@@ -32,13 +32,17 @@
     .font-montserrat { font-family: 'Montserrat', sans-serif; }
   </style>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init('k19BhR9q8jVqBwSid');   // ← paste the key from step 1
+</script>
 <body class="text-gray-900 bg-white antialiased">
   <!-- NAVBAR -->
   <header class="bg-white/90 backdrop-blur sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-5">
       <!-- <a href="#" class="text-2xl font-bold tracking-tight">Infinexia</a> -->
       <nav class="hidden md:flex space-x-8 text-sm font-medium">
-        <a href="#services" class="hover:text-indigo-600 transition">Services</a>
+        <!-- <a href="#services" class="hover:text-indigo-600 transition">Services</a> -->
         <a href="#about"     class="hover:text-indigo-600 transition">About</a>
         <a href="#contact"   class="hover:text-indigo-600 transition">Contact</a>
       </nav>
@@ -59,29 +63,42 @@
     </div>
   </section>
 
-  <!-- ABOUT / SERVICES (placeholder – tweak as needed) -->
-  <section id="about" class="py-20 bg-gray-50 fade">
-    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">Why Infinexia?</h2>
-        <p class="leading-relaxed text-gray-600">We connect tech brands with creators who share authentic stories, delivering measurable impact and long‑term growth. From campaign ideation to performance analytics, our team handles everything so you can focus on building products your customers love.</p>
-      </div>
-      <ul class="space-y-6 text-gray-700">
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
-          <span>Curated roster of 300+ tech creators</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
-          <span>Full‑service campaign management</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
-          <span>Conversion‑focused performance reporting</span>
-        </li>
-      </ul>
+  <!-- ABOUT / SERVICES -->
+<section id="about" class="py-20 bg-gray-50 fade">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">What We Actually Do</h2>
+      <p class="leading-relaxed text-gray-600">
+        Infinexia is a match-making engine for tech brands and creators.
+        We keep a curated, ever-growing roster of ~50 influencers
+        (5 core partners who answer fast) and introduce them to companies
+        that want authentic, long-tail reach—without the heavy agency price tag.
+        You get a single point of contact for vetting, negotiation, and campaign
+        coordination so you can focus on shipping products, not DM-tag.
+      </p>
     </div>
-  </section>
+
+    <ul class="space-y-6 text-gray-700">
+      <li class="flex items-start">
+        <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+        <span>50 vetted tech-focused creators (5 highly-responsive partners)</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+        <span>Brand-creator matchmaking & deal brokering</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+        <span>Contract & content brief coordination</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="w-6 h-6 text-indigo-600 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/></svg>
+        <span>Starter analytics (views, engagement, CPM) after each campaign</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
   <!-- CONTACT FORM -->
   <section id="contact" class="py-20 fade">
@@ -128,4 +145,26 @@
     });
   </script>
 </body>
+<script>
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();                                   // stop page reload
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Sending…';
+
+  try {
+    await emailjs.sendForm(
+      'service_dbr3y5o',   // step 1
+      'template_b7bnh21',  // step 1
+      e.target             // the HTMLFormElement
+    );
+    btn.textContent = 'Sent ✔';
+    e.target.reset();
+    alert('Thanks! We’ll be in touch soon.');
+  } catch (err) {
+    console.error(err);
+    btn.disabled = false; btn.textContent = 'Send';
+    alert('Oops—couldn’t send. Please try again later.');
+  }
+});
+</script>
 </html>
